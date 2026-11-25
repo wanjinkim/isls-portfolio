@@ -19,7 +19,7 @@
   const shared=p.key.startsWith('shared');
   dialog.dataset.project=p.key;
   overview.hidden=cover.hidden=meta.hidden=jump.hidden=shared;
-  caseHeading.textContent=shared?'공통 구현 사례':'구현과 검증';
+  caseHeading.textContent=shared?'기술 사례':'대표 사례';
   cover.replaceChildren();
   if(!shared){
    document.getElementById('related-transfer').href=p.key==='interm'?'#birdview-child-control':'#controller-file-transfer';
