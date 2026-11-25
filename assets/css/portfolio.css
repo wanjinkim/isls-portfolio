@@ -376,6 +376,37 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{o
 .case-detail[open] > summary::after {transform:rotate(225deg) translate(-1px,-1px)}
 .case-detail-body {min-width:0;padding-top:12px}
 .case-detail-body > .case-term-note {margin:0 0 12px}
+.case-detail-body :is(.transfer-investigation,.transfer-observations,.transfer-code-evidence) {
+ margin:18px 0;
+ padding:14px 0;
+ border-bottom:1px solid #dfddeb;
+}
+.case-detail-body :is(.transfer-investigation,.transfer-observations,.transfer-code-evidence) h4 {
+ margin:0 0 9px;
+ color:#49407d;
+}
+.case-detail-body .transfer-evidence-table {
+ width:100%;
+ table-layout:fixed;
+ border-collapse:collapse;
+ font-size:.85rem;
+}
+.case-detail-body .transfer-evidence-table :is(th,td) {
+ text-align:left;
+ vertical-align:top;
+ overflow-wrap:anywhere;
+ padding:7px;
+ border-bottom:1px solid #dfddeb;
+}
+.case-detail-body .transfer-evidence-table th {background:#fff3e3;color:#49407d}
+.case-detail-body .transfer-evidence-table th:first-child {width:28%}
+.case-detail-body .transfer-code-pair {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.case-detail-body .transfer-code-pair > div {min-width:0;padding:9px;background:#f7f6fb;border:1px solid #dfddeb;border-radius:6px}
+.case-detail-body .transfer-code-pair h5 {margin:0 0 6px;color:#49407d}
+.case-detail-body .transfer-code-pair pre {margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:600px) {
+ .case-detail-body .transfer-code-pair {grid-template-columns:minmax(0,1fr)}
+}
 @media screen and (prefers-reduced-motion:no-preference) {
  .case-detail[open] > .case-detail-body {animation:case-detail-reveal 210ms ease-out both}
  @keyframes case-detail-reveal {
